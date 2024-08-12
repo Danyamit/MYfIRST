@@ -133,17 +133,6 @@ void AProject1Character::Look(const FInputActionValue& Value)
 	}
 }
 
-void AProject1Character::SetTal(const FInputActionValue& Value)
-{
-	float a = Value.Get<float>() * -10;
-	float b = (CameraBoom->TargetArmLength + a);
-	if (Controller != nullptr) {
-		if (120 <= b and b <= 500) {
-			CameraBoom->TargetArmLength += a;
-		}
-	}
-}
-
 void AProject1Character::StartRun()
 {
 	if (Controller != nullptr) {
